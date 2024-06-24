@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:lawerdesk/constants/colors.dart';
 import 'package:lawerdesk/constants/sizedbox.dart';
-import 'package:lawerdesk/widget/document_container.dart';
+import 'package:lawerdesk/widget/screen2widgets/document_container.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class GradientContainer extends StatelessWidget {

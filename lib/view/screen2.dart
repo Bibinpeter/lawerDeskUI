@@ -3,8 +3,8 @@ import 'package:lawerdesk/constants/colors.dart';
 import 'package:lawerdesk/constants/sizedbox.dart';
 import 'package:lawerdesk/widget/appbar_widget.dart';
 import 'package:lawerdesk/widget/outlinewarnig.dart';
-import 'package:lawerdesk/widget/rotatingcontaner.dart';
-import 'package:lawerdesk/widget/screen2container.dart';
+import 'package:lawerdesk/widget/screen2widgets/rotatingcontaner.dart';
+import 'package:lawerdesk/widget/screen2widgets/screen2container.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class SecondPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Column(
+          const  Column(
               children: [
                 AppBarWidget(title: "Research Result", colors: AppColors.gradientColors),
                 Kheight,
@@ -31,31 +31,49 @@ class SecondPage extends StatelessWidget {
               left: -1,
               child: Column(
                 children: [
+
                   RotatedTextContainer(
-                  gradientColors: [Colors.white,Colors.white],
+                  gradientColors: const [Colors.white,Colors.white],
                     text: "description",
                     borderRadius: BorderRadius.circular(12),
-                  ),const SizedBox(height: 1,),
+                  ),
+                  
+                  const SizedBox(height: 1,),
+
+
                   RotatedTextContainer(
                  gradientColors: AppColors.gradientColors,
                     text: "judgements",
                     borderRadius: BorderRadius.circular(12),
-                  ),const SizedBox(height: 1,),
+                  ),
+                  
+                  const SizedBox(height: 1,),
+
+                  
                   RotatedTextContainer(
-                     gradientColors: [Colors.white,Colors.white],
+                     gradientColors:const [Colors.white,Colors.white],
                     text: "Rate",
                     borderRadius: BorderRadius.circular(12),
                   ),const SizedBox(height: 1,),
                   RotatedTextContainer(
-                   gradientColors: [Colors.white,Colors.white],
+                   gradientColors:const [Colors.white,Colors.white],
                     text: "Place",
                     borderRadius: BorderRadius.circular(12),
                   ),const SizedBox(height: 1,),
+
                    RotatedTextContainer(
-                    gradientColors: [Colors.white,Colors.white],
-                    text: "case file",
+                    //size
+                    gradientColors: const [Colors.white,Colors.white],
+                    text: "case file",//+color+size
                     borderRadius: BorderRadius.circular(12),
                   ), 
+                     RotatedTextContainer(
+                      textColor:Colors.amber,
+                 gradientColors: AppColors.gradientColors,
+                    text: "judgements",
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+
 
 
                 ],

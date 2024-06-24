@@ -1,44 +1,65 @@
 import 'package:flutter/material.dart';
 
 class RotatedTextContainer extends StatelessWidget {
-  final List<Color> gradientColors; // New property for gradient colors
+  final List<Color> gradientColors;
   final String text;
-  final BorderRadius borderRadius; // New property for border radius
+  final BorderRadius borderRadius;
+  final double width;
+  final double height;
+  final Color textColor;
+  final double textSize;
+  final Color boxShadowColor;
+  final double boxShadowSpreadRadius;
+  final double boxShadowBlurRadius;
+  final Offset boxShadowOffset;
+  final int quarterTurns;
 
-  const RotatedTextContainer({
-    Key? key,
+   const RotatedTextContainer({
+    super.key,
     required this.gradientColors,
     required this.text,
-    this.borderRadius = BorderRadius.zero, // Default value for border radius
-  }) : super(key: key);
+    this.borderRadius = BorderRadius.zero,
+    this.height = 80.0,
+    this.width = 25.0,
+    this.textColor = Colors.black,
+    this.textSize = 13.0,
+    this.boxShadowColor =  Colors.black,
+    this.boxShadowSpreadRadius = 1.0,
+    this.boxShadowBlurRadius = 5.0,
+    this.boxShadowOffset = const Offset(0, 3),
+    this.quarterTurns = 3,  
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 25,
-      height: 80,
+      width: width,
+      height: height,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: gradientColors,
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: borderRadius, // Apply the border radius here
+        borderRadius: borderRadius,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-            spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(0, 3), // changes position of shadow
+            color: boxShadowColor.withOpacity(0.5),
+            spreadRadius: boxShadowSpreadRadius,
+            blurRadius: boxShadowBlurRadius,
+            offset: boxShadowOffset,
           ),
         ],
       ),
       child: Center(
         child: RotatedBox(
-          quarterTurns: 3,
+          quarterTurns: quarterTurns,
           child: Text(
             text,
-            style: const TextStyle(color:Colors.black,fontSize: 13),
+            style: TextStyle(
+              color: textColor,
+              fontSize: textSize,
+            ),
           ),
         ),
       ),

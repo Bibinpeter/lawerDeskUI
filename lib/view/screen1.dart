@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lawerdesk/constants/colors.dart';
+import 'package:lawerdesk/constants/contentwidget.dart';
 import 'package:lawerdesk/constants/sizedbox.dart';
 import 'package:lawerdesk/view/screen2.dart';
 import 'package:lawerdesk/widget/appbar_widget.dart';
-import 'package:lawerdesk/widget/contentwidget.dart';
 import 'package:lawerdesk/widget/curentstate_widget.dart';
 import 'package:lawerdesk/widget/outlinewarnig.dart';
 import 'package:lawerdesk/widget/transparent_button.dart';

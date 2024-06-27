@@ -5,7 +5,7 @@ import 'package:lawerdesk/widget/appbar_widget.dart';
 import 'package:lawerdesk/widget/outlinewarnig.dart';
 import 'package:lawerdesk/widget/screen2widgets/rotatingcontaner.dart';
 import 'package:lawerdesk/widget/screen2widgets/screen2container.dart';
-
+ 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
 
